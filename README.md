@@ -1,6 +1,8 @@
-![alt tag](https://github.com/jchristn/htmlpagebuilder/blob/master/assets/icon.ico)
+![alt tag](https://raw.githubusercontent.com/jchristn/HtmlPageBuilder/main/assets/icon.ico)
 
 # HtmlPageBuilder
+
+[![NuGet Version](https://img.shields.io/nuget/v/HtmlPageBuilder.svg?style=flat)](https://www.nuget.org/packages/HtmlPageBuilder/) | [![NuGet](https://img.shields.io/nuget/dt/HtmlPageBuilder.svg)](https://www.nuget.org/packages/HtmlPageBuilder)
 
 ## Description
 
