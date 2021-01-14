@@ -1,4 +1,4 @@
-![alt tag](https://github.com/jchristn/watsonorm/blob/master/assets/watson.ico)
+![alt tag](https://github.com/jchristn/htmlpagebuilder/blob/master/assets/icon.ico)
 
 # HtmlPageBuilder
 
