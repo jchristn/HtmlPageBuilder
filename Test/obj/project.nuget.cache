@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "5xQ0+E5+v1MsQuLx5h8FOncPiZCuZG+liqtonH5hmggZJzeLd8ghHkTAnFFNujmuAcJONnsTqDslHoXn7Q1Exw==",
+  "success": true,
+  "projectFilePath": "c:\\code\\misc\\HtmlPageBuilder\\Test\\Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joelc\\.nuget\\packages\\ipmatcher\\1.0.4\\ipmatcher.1.0.4.nupkg.sha512",
+    "C:\\Users\\joelc\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\joelc\\.nuget\\packages\\regexmatcher\\1.0.7\\regexmatcher.1.0.7.nupkg.sha512",
+    "C:\\Users\\joelc\\.nuget\\packages\\watson\\4.0.0.3\\watson.4.0.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

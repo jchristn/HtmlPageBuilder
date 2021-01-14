@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2B8pbR2u2Z4i6x64TzqoEGc8h4V9PdmFkyK1ti9Fe52TsjbF6rfz85eM77KHRRbdCQaPApemgqQ9Jk2zQn14Jw==",
+  "success": true,
+  "projectFilePath": "c:\\code\\misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

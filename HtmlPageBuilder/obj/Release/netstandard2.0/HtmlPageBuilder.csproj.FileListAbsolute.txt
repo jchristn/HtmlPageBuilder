@@ -1,0 +1,12 @@
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Release\netstandard2.0\assets\icon.ico
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Release\netstandard2.0\assets\icon.png
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Release\netstandard2.0\LICENSE.md
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Release\netstandard2.0\HtmlPageBuilder.deps.json
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Release\netstandard2.0\HtmlPageBuilder.dll
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Release\netstandard2.0\HtmlPageBuilder.pdb
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Release\netstandard2.0\HtmlPageBuilder.xml
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netstandard2.0\HtmlPageBuilder.AssemblyInfoInputs.cache
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netstandard2.0\HtmlPageBuilder.AssemblyInfo.cs
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netstandard2.0\HtmlPageBuilder.csproj.CoreCompileInputs.cache
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netstandard2.0\HtmlPageBuilder.dll
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netstandard2.0\HtmlPageBuilder.pdb
