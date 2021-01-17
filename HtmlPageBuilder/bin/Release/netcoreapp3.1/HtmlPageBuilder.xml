@@ -132,6 +132,16 @@
             <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
             <returns>String.</returns>
         </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.Button(System.String,System.String,System.String,System.String)">
+            <summary>
+            Button.
+            </summary>
+            <param name="textToDisplay">Text to display.</param>
+            <param name="id">ID.</param>
+            <param name="classId">Class ID.</param>
+            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
+            <returns>String.</returns>
+        </member>
         <member name="T:HtmlPageBuilder.HtmlHead">
             <summary>
             HTML head.

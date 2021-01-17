@@ -5,7 +5,7 @@
   },
   "projects": {
     "c:\\code\\misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.0.2",
       "restore": {
         "projectUniqueName": "c:\\code\\misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj",
         "projectName": "HtmlPageBuilder",

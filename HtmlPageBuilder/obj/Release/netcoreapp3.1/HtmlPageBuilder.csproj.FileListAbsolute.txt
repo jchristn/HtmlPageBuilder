@@ -10,3 +10,4 @@ c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netcoreapp3.1\HtmlPageB
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netcoreapp3.1\HtmlPageBuilder.csproj.CoreCompileInputs.cache
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netcoreapp3.1\HtmlPageBuilder.dll
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netcoreapp3.1\HtmlPageBuilder.pdb
+c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\netcoreapp3.1\HtmlPageBuilder.csprojAssemblyReference.cache

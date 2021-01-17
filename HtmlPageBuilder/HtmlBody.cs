@@ -304,6 +304,26 @@ namespace HtmlPageBuilder
             return ret;
         }
 
+        /// <summary>
+        /// Button.
+        /// </summary>
+        /// <param name="textToDisplay">Text to display.</param>
+        /// <param name="id">ID.</param>
+        /// <param name="classId">Class ID.</param>
+        /// <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
+        /// <returns>String.</returns>
+        public string Button(string textToDisplay, string id = null, string classId = null, string style = null)
+        {
+            if (String.IsNullOrEmpty(textToDisplay)) throw new ArgumentNullException(nameof(textToDisplay));
+            string ret = "<button";
+            if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
+            if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
+            if (!String.IsNullOrEmpty(style)) ret += " style='" + style + "'";
+            else ret += " style='background-color:#33bd55; color:white; padding:8px; border:none; outline:none'";
+            ret += ">" + textToDisplay + "</button>";
+            return ret;
+        }
+
         #endregion
 
         #region Private-Methods

@@ -15,12 +15,23 @@ namespace Test
         static void Main(string[] args)
         {
             _Page = new HtmlPage();
+            
             _Page.Head.Title = "My Page";
+            
             _Page.Head.MetaKeywords = "my,page";
+            
             _Page.Head.Style = "h1 { font-family: 'arial' } p { font-family: 'arial' } ul { font-family: 'arial' }";
+            
             _Page.Body.Content += _Page.Body.H1Text("My Page");
+            
             _Page.Body.Content += _Page.Body.Paragraph("This is some sample text.");
+            
+            _Page.Body.Content += _Page.Body.Paragraph(
+                "This is a button within a paragraph!<br />" +
+                _Page.Body.Button("Click me!"));
+            
             _Page.Body.Content += _Page.Body.UnorderedList(new List<string> { "foo", "bar", "baz" });
+            
             _PageString = _Page.ToString();
 
             _Server = new Server("localhost", 9000);
