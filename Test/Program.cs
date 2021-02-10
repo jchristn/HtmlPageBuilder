@@ -23,12 +23,17 @@ namespace Test
             _Page.Head.Style = "h1 { font-family: 'arial' } p { font-family: 'arial' } ul { font-family: 'arial' }";
             
             _Page.Body.Content += _Page.Body.H1Text("My Page");
-            
+
+            _Page.Body.Content += _Page.Body.HorizontalRule();
+
             _Page.Body.Content += _Page.Body.Paragraph("This is some sample text.");
-            
+
             _Page.Body.Content += _Page.Body.Paragraph(
-                "This is a button within a paragraph!<br />" +
-                _Page.Body.Button("Click me!"));
+                "This is a button within a paragraph that links to Github!<br />" +
+                _Page.Body.Link(
+                    _Page.Body.Button("Click me!"),
+                    "https://github.com/jchristn/htmlpagebuilder",
+                    true));
             
             _Page.Body.Content += _Page.Body.UnorderedList(new List<string> { "foo", "bar", "baz" });
             

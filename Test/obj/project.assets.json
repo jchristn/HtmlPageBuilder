@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "IpMatcher/1.0.4": {
+      "IpMatcher/1.0.4.1": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/IpMatcher.dll": {}
@@ -29,10 +29,10 @@
           "lib/netcoreapp3.1/RegexMatcher.dll": {}
         }
       },
-      "Watson/4.0.0.3": {
+      "Watson/4.1.0": {
         "type": "package",
         "dependencies": {
-          "IpMatcher": "1.0.4",
+          "IpMatcher": "1.0.4.1",
           "Newtonsoft.Json": "12.0.3",
           "RegexMatcher": "1.0.7"
         },
@@ -43,7 +43,7 @@
           "lib/netcoreapp3.1/WatsonWebserver.dll": {}
         }
       },
-      "HtmlPageBuilder/1.0.0.2": {
+      "HtmlPageBuilder/1.0.0.3": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "compile": {
@@ -56,15 +56,15 @@
     }
   },
   "libraries": {
-    "IpMatcher/1.0.4": {
-      "sha512": "Qt4NTwW5UTQ5BFNUE8s8P1ybmthu1cKn+ZjOufguBoJNS89b/dDQxnUCAp9Iv7ts6C23GuO6h1JrcrItAlHPMA==",
+    "IpMatcher/1.0.4.1": {
+      "sha512": "Vk2wok2/ea6vLZUHUjxdVchLfMkFx+ABeOyLhV7HQmha+m2geFM93yPuEZfm0dv078KYPt6GHvwBHT62Nm9CSw==",
       "type": "package",
-      "path": "ipmatcher/1.0.4",
+      "path": "ipmatcher/1.0.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
-        "ipmatcher.1.0.4.nupkg.sha512",
+        "ipmatcher.1.0.4.1.nupkg.sha512",
         "ipmatcher.nuspec",
         "lib/net452/IpMatcher.dll",
         "lib/net5.0/IpMatcher.dll",
@@ -125,10 +125,10 @@
         "regexmatcher.nuspec"
       ]
     },
-    "Watson/4.0.0.3": {
-      "sha512": "Wl/EVUZQFDA2mreXYUMvf2fC1io8Qf+G5YUqacbdCfnSveGCN9xaxw6kXQU9z/4WVEjF8YHhJCPCVD/+qf5xvA==",
+    "Watson/4.1.0": {
+      "sha512": "H6XlAxpTqy8VnCcXBJsWQLF8dLjinDJTWEWvvFvK9YrlyQCvIpU6V4lJi3LropBFJgwB9U61ftJQIlXOdvznjw==",
       "type": "package",
-      "path": "watson/4.0.0.3",
+      "path": "watson/4.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -138,11 +138,11 @@
         "lib/netcoreapp3.1/WatsonWebserver.dll",
         "lib/netstandard2.0/WatsonWebserver.dll",
         "lib/netstandard2.1/WatsonWebserver.dll",
-        "watson.4.0.0.3.nupkg.sha512",
+        "watson.4.1.0.nupkg.sha512",
         "watson.nuspec"
       ]
     },
-    "HtmlPageBuilder/1.0.0.2": {
+    "HtmlPageBuilder/1.0.0.3": {
       "type": "project",
       "path": "../HtmlPageBuilder/HtmlPageBuilder.csproj",
       "msbuildProject": "../HtmlPageBuilder/HtmlPageBuilder.csproj"
@@ -150,8 +150,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "HtmlPageBuilder >= 1.0.0.2",
-      "Watson >= 4.0.0.3"
+      "HtmlPageBuilder >= 1.0.0.3",
+      "Watson >= 4.1.0"
     ]
   },
   "packageFolders": {
@@ -162,11 +162,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\code\\misc\\HtmlPageBuilder\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\code\\misc\\HtmlPageBuilder\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "c:\\code\\misc\\HtmlPageBuilder\\Test\\Test.csproj",
+      "projectPath": "C:\\code\\misc\\HtmlPageBuilder\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\joelc\\.nuget\\packages\\",
-      "outputPath": "c:\\code\\misc\\HtmlPageBuilder\\Test\\obj\\",
+      "outputPath": "C:\\code\\misc\\HtmlPageBuilder\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -188,8 +188,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "c:\\code\\misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj": {
-              "projectPath": "c:\\code\\misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj"
+            "C:\\code\\misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj": {
+              "projectPath": "C:\\code\\misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj"
             }
           }
         }
@@ -206,7 +206,7 @@
         "dependencies": {
           "Watson": {
             "target": "Package",
-            "version": "[4.0.0.3, )"
+            "version": "[4.1.0, )"
           }
         },
         "imports": [

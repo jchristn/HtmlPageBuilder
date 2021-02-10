@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "z4DykyBomRRGmRFxecvUyX7dvNQAxVMOecqch3jPi2kCtr6JJqR/ngn+mhaUc/51DqcpluzEmeB4ev4cgmSZiQ==",
+  "dgSpecHash": "b8Gd4w0H+NLXtbbcIAh6a/YDfx74aZFgfTLs9WDludrFmjpmZWXlTYtbSAGozjLF4LiZyMONDnFFs6I/a9V0Lw==",
   "success": true,
-  "projectFilePath": "c:\\code\\misc\\HtmlPageBuilder\\Test\\Test.csproj",
+  "projectFilePath": "C:\\code\\misc\\HtmlPageBuilder\\Test\\Test.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\joelc\\.nuget\\packages\\ipmatcher\\1.0.4\\ipmatcher.1.0.4.nupkg.sha512",
+    "C:\\Users\\joelc\\.nuget\\packages\\ipmatcher\\1.0.4.1\\ipmatcher.1.0.4.1.nupkg.sha512",
     "C:\\Users\\joelc\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\joelc\\.nuget\\packages\\regexmatcher\\1.0.7\\regexmatcher.1.0.7.nupkg.sha512",
-    "C:\\Users\\joelc\\.nuget\\packages\\watson\\4.0.0.3\\watson.4.0.0.3.nupkg.sha512"
+    "C:\\Users\\joelc\\.nuget\\packages\\watson\\4.1.0\\watson.4.1.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -142,6 +142,15 @@
             <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
             <returns>String.</returns>
         </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.HorizontalRule(System.String,System.String,System.String)">
+            <summary>
+            Horizontal rule.
+            </summary>
+            <param name="id">ID.</param>
+            <param name="classId">Class ID.</param>
+            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
+            <returns>String.</returns>
+        </member>
         <member name="T:HtmlPageBuilder.HtmlHead">
             <summary>
             HTML head.

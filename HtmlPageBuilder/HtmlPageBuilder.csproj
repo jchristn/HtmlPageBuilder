@@ -14,7 +14,7 @@
     <RepositoryType>github</RepositoryType>
     <PackageTags>html page builder head body tag css</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
-    <Version>1.0.0.2</Version>
+    <Version>1.0.0.3</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

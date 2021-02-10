@@ -324,6 +324,23 @@ namespace HtmlPageBuilder
             return ret;
         }
 
+        /// <summary>
+        /// Horizontal rule.
+        /// </summary>
+        /// <param name="id">ID.</param>
+        /// <param name="classId">Class ID.</param>
+        /// <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
+        /// <returns>String.</returns>
+        public string HorizontalRule(string id = null, string classId = null, string style = null)
+        {
+            string ret = "<hr";
+            if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
+            if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
+            if (!String.IsNullOrEmpty(style)) ret += " style='" + style + "'";
+            ret += ">";
+            return ret;
+        }
+
         #endregion
 
         #region Private-Methods
