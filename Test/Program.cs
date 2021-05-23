@@ -21,7 +21,7 @@ namespace Test
             _Page.Head.MetaKeywords = "my,page";
             
             _Page.Head.Style = "h1 { font-family: 'arial' } p { font-family: 'arial' } ul { font-family: 'arial' }";
-            
+
             _Page.Body.Content += _Page.Body.H1Text("My Page");
 
             _Page.Body.Content += _Page.Body.HorizontalRule();

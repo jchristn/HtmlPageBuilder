@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>HtmlPageBuilder</id>
-    <version>1.0.0.3</version>
+    <version>1.0.1</version>
     <authors>Joel Christner</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="file">LICENSE.md</license>
@@ -10,7 +10,7 @@
     <icon>icon.png</icon>
     <projectUrl>https://github.com/jchristn/HtmlPageBuilder</projectUrl>
     <description>Simple HTML page builder allowing you to specify head elements and add body elements using simple methods.</description>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Null friendliness</releaseNotes>
     <copyright>(c)2021 Joel Christner</copyright>
     <tags>html page builder head body tag css</tags>
     <repository type="github" url="https://github.com/jchristn/HtmlPageBuilder" />

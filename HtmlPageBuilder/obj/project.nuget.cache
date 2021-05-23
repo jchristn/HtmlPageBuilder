@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H/CXie7+wOKelqRH+boLbyEZcVa7lQszqIV1xh+yRbnMjH+R2NA2U4zvy9CpsybxdHGlYJZxwRLttGxqtWlltw==",
+  "dgSpecHash": "sMszUcmogoEmqWMafOy5NpRQBa0gR0OPKzdrwCaREUhHtj3Yg86x91A357O9xQBTG3MNoOnsxFkJhd/IgWhVNg==",
   "success": true,
-  "projectFilePath": "C:\\code\\misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj",
+  "projectFilePath": "C:\\Code\\Misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

@@ -39,7 +39,6 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string H1Text(string text, string id = null, string classId = null, string style = null)
         {
-            if (String.IsNullOrEmpty(text)) throw new ArgumentNullException(nameof(text));
             string ret = "<h1";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
@@ -58,7 +57,6 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string H2Text(string text, string id = null, string classId = null, string style = null)
         {
-            if (String.IsNullOrEmpty(text)) throw new ArgumentNullException(nameof(text));
             string ret = "<h2";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
@@ -77,7 +75,6 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string H3Text(string text, string id = null, string classId = null, string style = null)
         {
-            if (String.IsNullOrEmpty(text)) throw new ArgumentNullException(nameof(text));
             string ret = "<h3";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
@@ -96,7 +93,6 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string Preformatted(string text, string id = null, string classId = null, string style = null)
         {
-            if (String.IsNullOrEmpty(text)) throw new ArgumentNullException(nameof(text));
             string ret = "<pre";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
@@ -115,7 +111,6 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string Paragraph(string text, string id = null, string classId = null, string style = null)
         {
-            if (String.IsNullOrEmpty(text)) throw new ArgumentNullException(nameof(text));
             string ret = "<p";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
@@ -135,7 +130,6 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string Div(string text, string id = null, string classId = null, string style = null)
         {
-            if (String.IsNullOrEmpty(text)) throw new ArgumentNullException(nameof(text));
             string ret = "<div";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
@@ -156,8 +150,6 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string Link(string textToDisplay, string url, bool newWindow = false, string id = null, string classId = null, string style = null)
         {
-            if (String.IsNullOrEmpty(textToDisplay)) throw new ArgumentNullException(nameof(textToDisplay));
-            if (String.IsNullOrEmpty(url)) throw new ArgumentNullException(nameof(url));
             string ret = "<a href='" + url + "'";
             if (newWindow) ret += " target='_blank'";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
@@ -178,7 +170,6 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string Image(string text, string url, string id = null, string classId = null, string style = null)
         {
-            if (String.IsNullOrEmpty(url)) throw new ArgumentNullException(nameof(url));
             string ret = "<img src='" + url + "'";
             if (!String.IsNullOrEmpty(text)) ret += " alt='" + text + "'";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
@@ -200,22 +191,24 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string OrderedList(List<string> items, string listType = "1", string emptyVal = "(empty)", string id = null, string classId = null, string style = null)
         {
-            if (items == null) throw new ArgumentNullException(nameof(items));
             string ret = "<ol";
             if (!String.IsNullOrEmpty(listType)) ret += " type='" + listType + "'";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
             if (!String.IsNullOrEmpty(style)) ret += " style='" + style + "'";
             ret += ">";
-            if (items.Count < 1 && !String.IsNullOrEmpty(emptyVal))
+            if (items != null)
             {
-                ret += "<li>" + emptyVal + "</li>";
-            }
-            else
-            {
-                foreach (string item in items)
+                if (items.Count < 1 && !String.IsNullOrEmpty(emptyVal))
                 {
-                    ret += "<li>" + item + "</li>";
+                    ret += "<li>" + emptyVal + "</li>";
+                }
+                else
+                {
+                    foreach (string item in items)
+                    {
+                        ret += "<li>" + item + "</li>";
+                    }
                 }
             }
             ret += "</ol>";
@@ -234,22 +227,24 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string UnorderedList(List<string> items, string listType = "disc", string emptyVal = "(empty)", string id = null, string classId = null, string style = null)
         {
-            if (items == null) throw new ArgumentNullException(nameof(items));
             string ret = "<ul";
             if (!String.IsNullOrEmpty(listType)) ret += " type='" + listType + "'";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
             if (!String.IsNullOrEmpty(style)) ret += " style='" + style + "'";
             ret += ">";
-            if (items.Count < 1 && !String.IsNullOrEmpty(emptyVal))
+            if (items != null)
             {
-                ret += "<li>" + emptyVal + "</li>";
-            }
-            else
-            {
-                foreach (string item in items)
+                if (items.Count < 1 && !String.IsNullOrEmpty(emptyVal))
                 {
-                    ret += "<li>" + item + "</li>";
+                    ret += "<li>" + emptyVal + "</li>";
+                }
+                else
+                {
+                    foreach (string item in items)
+                    {
+                        ret += "<li>" + item + "</li>";
+                    }
                 }
             }
             ret += "</ul>";
@@ -266,38 +261,42 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string Table(DataTable table, string id = null, string classId = null, string style = null)
         {
-            if (table == null) throw new ArgumentNullException(nameof(table));
-            if (table.Columns == null || table.Columns.Count < 1) throw new ArgumentException("DataTable contains no columns.");
-            if (table.Rows == null || table.Rows.Count < 1) throw new ArgumentException("DataTable contains no rows.");
-
             string ret = "<table";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
             if (!String.IsNullOrEmpty(style)) ret += " style='" + style + "'";
             ret += ">";
 
-            ret += "<tr>";
-            foreach (DataColumn column in table.Columns)
-            {
-                ret += "<th>" + column.ColumnName + "</th>";
-            }
-            ret += "</tr>";
-
-            foreach (DataRow row in table.Rows)
+            if (table != null && table.Columns != null && table.Columns.Count > 0)
             {
                 ret += "<tr>";
 
                 foreach (DataColumn column in table.Columns)
                 {
-                    string val = "";
-                    if (row[column.ColumnName] != null && row[column.ColumnName] != DBNull.Value)
-                    {
-                        val = row[column.ColumnName].ToString();
-                    }
-                    ret += "<td>" + val + "</td>";
+                    ret += "<th>" + column.ColumnName + "</th>";
                 }
 
                 ret += "</tr>";
+            }
+
+            if (table != null && table.Rows != null && table.Rows.Count > 0)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    ret += "<tr>";
+
+                    foreach (DataColumn column in table.Columns)
+                    {
+                        string val = "";
+                        if (row[column.ColumnName] != null && row[column.ColumnName] != DBNull.Value)
+                        {
+                            val = row[column.ColumnName].ToString();
+                        }
+                        ret += "<td>" + val + "</td>";
+                    }
+
+                    ret += "</tr>";
+                }
             }
 
             ret += "</table>";
@@ -314,7 +313,6 @@ namespace HtmlPageBuilder
         /// <returns>String.</returns>
         public string Button(string textToDisplay, string id = null, string classId = null, string style = null)
         {
-            if (String.IsNullOrEmpty(textToDisplay)) throw new ArgumentNullException(nameof(textToDisplay));
             string ret = "<button";
             if (!String.IsNullOrEmpty(id)) ret += " id='" + id + "'";
             if (!String.IsNullOrEmpty(classId)) ret += " class='" + classId + "'";
