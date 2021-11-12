@@ -8,51 +8,60 @@
     ".NETCoreApp,Version=v3.1": {
       "Test/1.0.0": {
         "dependencies": {
-          "HtmlPageBuilder": "1.0.1",
-          "Watson": "4.1.0"
+          "HtmlPageBuilder": "1.0.1.1",
+          "Watson": "4.2.2.3"
         },
         "runtime": {
           "Test.dll": {}
         }
       },
-      "IpMatcher/1.0.4.1": {
+      "IpMatcher/1.0.4.3": {
         "runtime": {
           "lib/netcoreapp3.1/IpMatcher.dll": {
-            "assemblyVersion": "1.0.4.1",
-            "fileVersion": "1.0.4.1"
+            "assemblyVersion": "1.0.4.3",
+            "fileVersion": "1.0.4.3"
           }
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.3.23909"
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
           }
         }
       },
-      "RegexMatcher/1.0.7": {
+      "RegexMatcher/1.0.7.1": {
         "runtime": {
           "lib/netcoreapp3.1/RegexMatcher.dll": {
-            "assemblyVersion": "1.0.7.0",
-            "fileVersion": "1.0.7.0"
+            "assemblyVersion": "1.0.7.1",
+            "fileVersion": "1.0.7.1"
           }
         }
       },
-      "Watson/4.1.0": {
+      "UrlMatcher/1.0.0.2": {
+        "runtime": {
+          "lib/netcoreapp3.1/UrlMatcher.dll": {
+            "assemblyVersion": "1.0.0.2",
+            "fileVersion": "1.0.0.2"
+          }
+        }
+      },
+      "Watson/4.2.2.3": {
         "dependencies": {
-          "IpMatcher": "1.0.4.1",
-          "Newtonsoft.Json": "12.0.3",
-          "RegexMatcher": "1.0.7"
+          "IpMatcher": "1.0.4.3",
+          "Newtonsoft.Json": "13.0.1",
+          "RegexMatcher": "1.0.7.1",
+          "UrlMatcher": "1.0.0.2"
         },
         "runtime": {
           "lib/netcoreapp3.1/WatsonWebserver.dll": {
-            "assemblyVersion": "4.1.0.0",
-            "fileVersion": "4.1.0.0"
+            "assemblyVersion": "4.2.2.3",
+            "fileVersion": "4.2.2.3"
           }
         }
       },
-      "HtmlPageBuilder/1.0.1": {
+      "HtmlPageBuilder/1.0.1.1": {
         "runtime": {
           "HtmlPageBuilder.dll": {}
         }
@@ -65,35 +74,42 @@
       "serviceable": false,
       "sha512": ""
     },
-    "IpMatcher/1.0.4.1": {
+    "IpMatcher/1.0.4.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Vk2wok2/ea6vLZUHUjxdVchLfMkFx+ABeOyLhV7HQmha+m2geFM93yPuEZfm0dv078KYPt6GHvwBHT62Nm9CSw==",
-      "path": "ipmatcher/1.0.4.1",
-      "hashPath": "ipmatcher.1.0.4.1.nupkg.sha512"
+      "sha512": "sha512-oms+9+6KVsYThvd3/1mIvKSlwQdhQQ4UDFNVx4wqCEnG4jiilsU1UVMDQ+/pxph0SVJFXN6lRQvK/lCt+gWJ9Q==",
+      "path": "ipmatcher/1.0.4.3",
+      "hashPath": "ipmatcher.1.0.4.3.nupkg.sha512"
     },
-    "Newtonsoft.Json/12.0.3": {
+    "Newtonsoft.Json/13.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
-      "path": "newtonsoft.json/12.0.3",
-      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
-    "RegexMatcher/1.0.7": {
+    "RegexMatcher/1.0.7.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UvR1Hf3YaLgCUj5Ec7lELvS+iPotID44c/+v+TiGCNWz90T5V/t7rF3RXURNQMmORn0fGcJXTqgeR6gKOuF+8w==",
-      "path": "regexmatcher/1.0.7",
-      "hashPath": "regexmatcher.1.0.7.nupkg.sha512"
+      "sha512": "sha512-O+oj479G2gJKcZsl9aqXkVtBSLj2L5t4p6AIzp9q+E/z2Cpi+OLSqwAhj1EFFbNKjzFHdIGnABxbEr8oPkfHJw==",
+      "path": "regexmatcher/1.0.7.1",
+      "hashPath": "regexmatcher.1.0.7.1.nupkg.sha512"
     },
-    "Watson/4.1.0": {
+    "UrlMatcher/1.0.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-H6XlAxpTqy8VnCcXBJsWQLF8dLjinDJTWEWvvFvK9YrlyQCvIpU6V4lJi3LropBFJgwB9U61ftJQIlXOdvznjw==",
-      "path": "watson/4.1.0",
-      "hashPath": "watson.4.1.0.nupkg.sha512"
+      "sha512": "sha512-e55SdkSvVIhOyHTIMgwRW5GBtvTEBXpdfdpyziEYqVFJQbEj9rXVWix2kNgJ15i/XiGuRqmoYH1ULoAOt7mIxA==",
+      "path": "urlmatcher/1.0.0.2",
+      "hashPath": "urlmatcher.1.0.0.2.nupkg.sha512"
     },
-    "HtmlPageBuilder/1.0.1": {
+    "Watson/4.2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-poNx0jCz0cykYlT47WiEJMGy51V+uBkj1BJsyJCDwgoGuZIO4+E6xQDe0UWGqcJ15rHMTYR4mFXhIdkKVgydOw==",
+      "path": "watson/4.2.2.3",
+      "hashPath": "watson.4.2.2.3.nupkg.sha512"
+    },
+    "HtmlPageBuilder/1.0.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -13,4 +13,4 @@ c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net5.0\HtmlPageBuilder.
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net5.0\HtmlPageBuilder.dll
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net5.0\ref\HtmlPageBuilder.dll
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net5.0\HtmlPageBuilder.pdb
-c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net5.0\HtmlPageBuilder.csprojAssemblyReference.cache
+C:\Code\Misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net5.0\HtmlPageBuilder.csproj.AssemblyReference.cache

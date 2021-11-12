@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "IpMatcher/1.0.4.1": {
+      "IpMatcher/1.0.4.3": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/IpMatcher.dll": {}
@@ -11,7 +11,7 @@
           "lib/netcoreapp3.1/IpMatcher.dll": {}
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -20,21 +20,38 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RegexMatcher/1.0.7": {
+      "RegexMatcher/1.0.7.1": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/RegexMatcher.dll": {}
         },
         "runtime": {
           "lib/netcoreapp3.1/RegexMatcher.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
         }
       },
-      "Watson/4.1.0": {
+      "UrlMatcher/1.0.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/UrlMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/UrlMatcher.dll": {}
+        }
+      },
+      "Watson/4.2.2.3": {
         "type": "package",
         "dependencies": {
-          "IpMatcher": "1.0.4.1",
-          "Newtonsoft.Json": "12.0.3",
-          "RegexMatcher": "1.0.7"
+          "IpMatcher": "1.0.4.3",
+          "Newtonsoft.Json": "13.0.1",
+          "RegexMatcher": "1.0.7.1",
+          "UrlMatcher": "1.0.0.2"
         },
         "compile": {
           "lib/netcoreapp3.1/WatsonWebserver.dll": {}
@@ -43,9 +60,499 @@
           "lib/netcoreapp3.1/WatsonWebserver.dll": {}
         }
       },
-      "HtmlPageBuilder/1.0.1": {
+      "HtmlPageBuilder/1.0.1.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        }
+      }
+    },
+    ".NETCoreApp,Version=v3.1/win7-x86": {
+      "IpMatcher/1.0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/IpMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/IpMatcher.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RegexMatcher/1.0.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/RegexMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/RegexMatcher.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "UrlMatcher/1.0.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/UrlMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/UrlMatcher.dll": {}
+        }
+      },
+      "Watson/4.2.2.3": {
+        "type": "package",
+        "dependencies": {
+          "IpMatcher": "1.0.4.3",
+          "Newtonsoft.Json": "13.0.1",
+          "RegexMatcher": "1.0.7.1",
+          "UrlMatcher": "1.0.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/WatsonWebserver.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/WatsonWebserver.dll": {}
+        }
+      },
+      "HtmlPageBuilder/1.0.1.1": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2": {
+      "IpMatcher/1.0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net452/IpMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net452/IpMatcher.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RegexMatcher/1.0.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net462/RegexMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net462/RegexMatcher.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "UrlMatcher/1.0.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net452/UrlMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net452/UrlMatcher.dll": {}
+        }
+      },
+      "Watson/4.2.2.3": {
+        "type": "package",
+        "dependencies": {
+          "IpMatcher": "1.0.4.3",
+          "Newtonsoft.Json": "13.0.1",
+          "RegexMatcher": "1.0.7.1",
+          "UrlMatcher": "1.0.0.2"
+        },
+        "compile": {
+          "lib/net462/WatsonWebserver.dll": {}
+        },
+        "runtime": {
+          "lib/net462/WatsonWebserver.dll": {}
+        }
+      },
+      "HtmlPageBuilder/1.0.1.1": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "compile": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win7-x86": {
+      "IpMatcher/1.0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net452/IpMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net452/IpMatcher.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RegexMatcher/1.0.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net462/RegexMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net462/RegexMatcher.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "UrlMatcher/1.0.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net452/UrlMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net452/UrlMatcher.dll": {}
+        }
+      },
+      "Watson/4.2.2.3": {
+        "type": "package",
+        "dependencies": {
+          "IpMatcher": "1.0.4.3",
+          "Newtonsoft.Json": "13.0.1",
+          "RegexMatcher": "1.0.7.1",
+          "UrlMatcher": "1.0.0.2"
+        },
+        "compile": {
+          "lib/net462/WatsonWebserver.dll": {}
+        },
+        "runtime": {
+          "lib/net462/WatsonWebserver.dll": {}
+        }
+      },
+      "HtmlPageBuilder/1.0.1.1": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "compile": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        }
+      }
+    },
+    "net5.0": {
+      "IpMatcher/1.0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IpMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/IpMatcher.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RegexMatcher/1.0.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/RegexMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/RegexMatcher.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "UrlMatcher/1.0.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/UrlMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/UrlMatcher.dll": {}
+        }
+      },
+      "Watson/4.2.2.3": {
+        "type": "package",
+        "dependencies": {
+          "IpMatcher": "1.0.4.3",
+          "Newtonsoft.Json": "13.0.1",
+          "RegexMatcher": "1.0.7.1",
+          "UrlMatcher": "1.0.0.2"
+        },
+        "compile": {
+          "lib/net5.0/WatsonWebserver.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/WatsonWebserver.dll": {}
+        }
+      },
+      "HtmlPageBuilder/1.0.1.1": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        }
+      }
+    },
+    "net5.0/win7-x86": {
+      "IpMatcher/1.0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IpMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/IpMatcher.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RegexMatcher/1.0.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/RegexMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/RegexMatcher.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "UrlMatcher/1.0.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/UrlMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/UrlMatcher.dll": {}
+        }
+      },
+      "Watson/4.2.2.3": {
+        "type": "package",
+        "dependencies": {
+          "IpMatcher": "1.0.4.3",
+          "Newtonsoft.Json": "13.0.1",
+          "RegexMatcher": "1.0.7.1",
+          "UrlMatcher": "1.0.0.2"
+        },
+        "compile": {
+          "lib/net5.0/WatsonWebserver.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/WatsonWebserver.dll": {}
+        }
+      },
+      "HtmlPageBuilder/1.0.1.1": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        }
+      }
+    },
+    "net6.0": {
+      "IpMatcher/1.0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/IpMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/IpMatcher.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RegexMatcher/1.0.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RegexMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/RegexMatcher.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "UrlMatcher/1.0.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UrlMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UrlMatcher.dll": {}
+        }
+      },
+      "Watson/4.2.2.3": {
+        "type": "package",
+        "dependencies": {
+          "IpMatcher": "1.0.4.3",
+          "Newtonsoft.Json": "13.0.1",
+          "RegexMatcher": "1.0.7.1",
+          "UrlMatcher": "1.0.0.2"
+        },
+        "compile": {
+          "lib/net6.0/WatsonWebserver.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/WatsonWebserver.dll": {}
+        }
+      },
+      "HtmlPageBuilder/1.0.1.1": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HtmlPageBuilder.dll": {}
+        }
+      }
+    },
+    "net6.0/win7-x86": {
+      "IpMatcher/1.0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/IpMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/IpMatcher.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RegexMatcher/1.0.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RegexMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/RegexMatcher.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "UrlMatcher/1.0.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UrlMatcher.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UrlMatcher.dll": {}
+        }
+      },
+      "Watson/4.2.2.3": {
+        "type": "package",
+        "dependencies": {
+          "IpMatcher": "1.0.4.3",
+          "Newtonsoft.Json": "13.0.1",
+          "RegexMatcher": "1.0.7.1",
+          "UrlMatcher": "1.0.0.2"
+        },
+        "compile": {
+          "lib/net6.0/WatsonWebserver.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/WatsonWebserver.dll": {}
+        }
+      },
+      "HtmlPageBuilder/1.0.1.1": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
           "bin/placeholder/HtmlPageBuilder.dll": {}
         },
@@ -56,28 +563,29 @@
     }
   },
   "libraries": {
-    "IpMatcher/1.0.4.1": {
-      "sha512": "Vk2wok2/ea6vLZUHUjxdVchLfMkFx+ABeOyLhV7HQmha+m2geFM93yPuEZfm0dv078KYPt6GHvwBHT62Nm9CSw==",
+    "IpMatcher/1.0.4.3": {
+      "sha512": "oms+9+6KVsYThvd3/1mIvKSlwQdhQQ4UDFNVx4wqCEnG4jiilsU1UVMDQ+/pxph0SVJFXN6lRQvK/lCt+gWJ9Q==",
       "type": "package",
-      "path": "ipmatcher/1.0.4.1",
+      "path": "ipmatcher/1.0.4.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
-        "ipmatcher.1.0.4.1.nupkg.sha512",
+        "ipmatcher.1.0.4.3.nupkg.sha512",
         "ipmatcher.nuspec",
         "lib/net452/IpMatcher.dll",
         "lib/net5.0/IpMatcher.dll",
+        "lib/net6.0/IpMatcher.dll",
         "lib/netcoreapp3.1/IpMatcher.dll",
         "lib/netstandard2.0/IpMatcher.dll",
         "lib/netstandard2.0/IpMatcher.xml",
         "lib/netstandard2.1/IpMatcher.dll"
       ]
     },
-    "Newtonsoft.Json/12.0.3": {
-      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.3",
+      "path": "newtonsoft.json/13.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -96,53 +604,95 @@
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
     },
-    "RegexMatcher/1.0.7": {
-      "sha512": "UvR1Hf3YaLgCUj5Ec7lELvS+iPotID44c/+v+TiGCNWz90T5V/t7rF3RXURNQMmORn0fGcJXTqgeR6gKOuF+8w==",
+    "RegexMatcher/1.0.7.1": {
+      "sha512": "O+oj479G2gJKcZsl9aqXkVtBSLj2L5t4p6AIzp9q+E/z2Cpi+OLSqwAhj1EFFbNKjzFHdIGnABxbEr8oPkfHJw==",
       "type": "package",
-      "path": "regexmatcher/1.0.7",
+      "path": "regexmatcher/1.0.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.md",
+        "content/Assets/icon.ico",
+        "content/Assets/icon.png",
+        "content/LICENSE.md",
+        "contentFiles/any/net462/Assets/icon.ico",
+        "contentFiles/any/net462/Assets/icon.png",
+        "contentFiles/any/net462/LICENSE.md",
+        "contentFiles/any/net5.0/Assets/icon.ico",
+        "contentFiles/any/net5.0/Assets/icon.png",
+        "contentFiles/any/net5.0/LICENSE.md",
+        "contentFiles/any/net6.0/Assets/icon.ico",
+        "contentFiles/any/net6.0/Assets/icon.png",
+        "contentFiles/any/net6.0/LICENSE.md",
+        "contentFiles/any/netcoreapp3.1/Assets/icon.ico",
+        "contentFiles/any/netcoreapp3.1/Assets/icon.png",
+        "contentFiles/any/netcoreapp3.1/LICENSE.md",
+        "contentFiles/any/netstandard2.0/Assets/icon.ico",
+        "contentFiles/any/netstandard2.0/Assets/icon.png",
+        "contentFiles/any/netstandard2.0/LICENSE.md",
+        "contentFiles/any/netstandard2.1/Assets/icon.ico",
+        "contentFiles/any/netstandard2.1/Assets/icon.png",
+        "contentFiles/any/netstandard2.1/LICENSE.md",
         "lib/net462/RegexMatcher.dll",
         "lib/net5.0/RegexMatcher.dll",
-        "lib/netcoreapp2.0/RegexMatcher.dll",
-        "lib/netcoreapp3.0/RegexMatcher.dll",
+        "lib/net6.0/RegexMatcher.dll",
         "lib/netcoreapp3.1/RegexMatcher.dll",
         "lib/netstandard2.0/RegexMatcher.dll",
         "lib/netstandard2.0/RegexMatcher.xml",
         "lib/netstandard2.1/RegexMatcher.dll",
-        "regexmatcher.1.0.7.nupkg.sha512",
+        "regexmatcher.1.0.7.1.nupkg.sha512",
         "regexmatcher.nuspec"
       ]
     },
-    "Watson/4.1.0": {
-      "sha512": "H6XlAxpTqy8VnCcXBJsWQLF8dLjinDJTWEWvvFvK9YrlyQCvIpU6V4lJi3LropBFJgwB9U61ftJQIlXOdvznjw==",
+    "UrlMatcher/1.0.0.2": {
+      "sha512": "e55SdkSvVIhOyHTIMgwRW5GBtvTEBXpdfdpyziEYqVFJQbEj9rXVWix2kNgJ15i/XiGuRqmoYH1ULoAOt7mIxA==",
       "type": "package",
-      "path": "watson/4.1.0",
+      "path": "urlmatcher/1.0.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net452/UrlMatcher.dll",
+        "lib/net452/UrlMatcher.xml",
+        "lib/net5.0/UrlMatcher.dll",
+        "lib/net5.0/UrlMatcher.xml",
+        "lib/net6.0/UrlMatcher.dll",
+        "lib/net6.0/UrlMatcher.xml",
+        "lib/netcoreapp3.1/UrlMatcher.dll",
+        "lib/netcoreapp3.1/UrlMatcher.xml",
+        "lib/netstandard2.0/UrlMatcher.dll",
+        "lib/netstandard2.0/UrlMatcher.xml",
+        "lib/netstandard2.1/UrlMatcher.dll",
+        "lib/netstandard2.1/UrlMatcher.xml",
+        "urlmatcher.1.0.0.2.nupkg.sha512",
+        "urlmatcher.nuspec"
+      ]
+    },
+    "Watson/4.2.2.3": {
+      "sha512": "poNx0jCz0cykYlT47WiEJMGy51V+uBkj1BJsyJCDwgoGuZIO4+E6xQDe0UWGqcJ15rHMTYR4mFXhIdkKVgydOw==",
+      "type": "package",
+      "path": "watson/4.2.2.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "lib/net462/WatsonWebserver.dll",
         "lib/net5.0/WatsonWebserver.dll",
+        "lib/net6.0/WatsonWebserver.dll",
         "lib/netcoreapp3.1/WatsonWebserver.dll",
-        "lib/netstandard2.0/WatsonWebserver.dll",
+        "lib/netcoreapp3.1/WatsonWebserver.xml",
         "lib/netstandard2.1/WatsonWebserver.dll",
-        "watson.4.1.0.nupkg.sha512",
-        "watson.nuspec"
+        "watson.4.2.2.3.nupkg.sha512",
+        "watson.nuspec",
+        "watson.png"
       ]
     },
-    "HtmlPageBuilder/1.0.1": {
+    "HtmlPageBuilder/1.0.1.1": {
       "type": "project",
       "path": "../HtmlPageBuilder/HtmlPageBuilder.csproj",
       "msbuildProject": "../HtmlPageBuilder/HtmlPageBuilder.csproj"
@@ -150,13 +700,26 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "HtmlPageBuilder >= 1.0.1",
-      "Watson >= 4.1.0"
+      "HtmlPageBuilder >= 1.0.1.1",
+      "Watson >= 4.2.2.3"
+    ],
+    ".NETFramework,Version=v4.6.2": [
+      "HtmlPageBuilder >= 1.0.1.1",
+      "Watson >= 4.2.2.3"
+    ],
+    "net5.0": [
+      "HtmlPageBuilder >= 1.0.1.1",
+      "Watson >= 4.2.2.3"
+    ],
+    "net6.0": [
+      "HtmlPageBuilder >= 1.0.1.1",
+      "Watson >= 4.2.2.3"
     ]
   },
   "packageFolders": {
     "C:\\Users\\joelc\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -168,16 +731,22 @@
       "packagesPath": "C:\\Users\\joelc\\.nuget\\packages\\",
       "outputPath": "C:\\Code\\Misc\\HtmlPageBuilder\\Test\\obj\\",
       "projectStyle": "PackageReference",
+      "crossTargeting": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\joelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
+        "net462",
+        "net5.0",
+        "net6.0",
         "netcoreapp3.1"
       ],
       "sources": {
@@ -187,6 +756,30 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "C:\\Code\\Misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj": {
+              "projectPath": "C:\\Code\\Misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj"
+            }
+          }
+        },
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Code\\Misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj": {
+              "projectPath": "C:\\Code\\Misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj"
+            }
+          }
+        },
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Code\\Misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj": {
+              "projectPath": "C:\\Code\\Misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj"
+            }
+          }
+        },
+        "net462": {
+          "targetAlias": "net462",
           "projectReferences": {
             "C:\\Code\\Misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj": {
               "projectPath": "C:\\Code\\Misc\\HtmlPageBuilder\\HtmlPageBuilder\\HtmlPageBuilder.csproj"
@@ -206,7 +799,7 @@
         "dependencies": {
           "Watson": {
             "target": "Package",
-            "version": "[4.1.0, )"
+            "version": "[4.2.2.3, )"
           }
         },
         "imports": [
@@ -219,18 +812,77 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.13, 3.1.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+      },
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "Watson": {
+            "target": "Package",
+            "version": "[4.2.2.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+      },
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Watson": {
+            "target": "Package",
+            "version": "[4.2.2.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+      },
+      "net462": {
+        "targetAlias": "net462",
+        "dependencies": {
+          "Watson": {
+            "target": "Package",
+            "version": "[4.2.2.3, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win7-x86": {
+        "#import": []
       }
     }
   }

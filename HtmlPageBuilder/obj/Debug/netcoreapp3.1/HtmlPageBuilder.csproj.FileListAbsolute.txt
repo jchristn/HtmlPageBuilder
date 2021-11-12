@@ -5,9 +5,10 @@ c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Debug\netcoreapp3.1\HtmlPageBui
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Debug\netcoreapp3.1\HtmlPageBuilder.dll
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Debug\netcoreapp3.1\HtmlPageBuilder.pdb
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Debug\netcoreapp3.1\HtmlPageBuilder.xml
-c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netcoreapp3.1\HtmlPageBuilder.csprojAssemblyReference.cache
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netcoreapp3.1\HtmlPageBuilder.AssemblyInfoInputs.cache
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netcoreapp3.1\HtmlPageBuilder.AssemblyInfo.cs
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netcoreapp3.1\HtmlPageBuilder.csproj.CoreCompileInputs.cache
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netcoreapp3.1\HtmlPageBuilder.dll
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netcoreapp3.1\HtmlPageBuilder.pdb
+C:\Code\Misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netcoreapp3.1\HtmlPageBuilder.csproj.AssemblyReference.cache
+C:\Code\Misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netcoreapp3.1\HtmlPageBuilder.GeneratedMSBuildEditorConfig.editorconfig

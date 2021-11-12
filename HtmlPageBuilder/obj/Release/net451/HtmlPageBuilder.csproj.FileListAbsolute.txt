@@ -9,4 +9,5 @@ c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net451\HtmlPageBuilder.
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net451\HtmlPageBuilder.csproj.CoreCompileInputs.cache
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net451\HtmlPageBuilder.dll
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net451\HtmlPageBuilder.pdb
-c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net451\HtmlPageBuilder.csprojAssemblyReference.cache
+C:\Code\Misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net451\HtmlPageBuilder.csproj.AssemblyReference.cache
+C:\Code\Misc\HtmlPageBuilder\HtmlPageBuilder\obj\Release\net451\HtmlPageBuilder.GeneratedMSBuildEditorConfig.editorconfig

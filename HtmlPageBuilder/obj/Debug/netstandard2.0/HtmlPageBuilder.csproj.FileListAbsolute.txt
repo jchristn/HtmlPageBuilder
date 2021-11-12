@@ -5,9 +5,10 @@ c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Debug\netstandard2.0\HtmlPageBu
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Debug\netstandard2.0\HtmlPageBuilder.dll
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Debug\netstandard2.0\HtmlPageBuilder.pdb
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\bin\Debug\netstandard2.0\HtmlPageBuilder.xml
-c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netstandard2.0\HtmlPageBuilder.csprojAssemblyReference.cache
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netstandard2.0\HtmlPageBuilder.AssemblyInfoInputs.cache
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netstandard2.0\HtmlPageBuilder.AssemblyInfo.cs
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netstandard2.0\HtmlPageBuilder.csproj.CoreCompileInputs.cache
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netstandard2.0\HtmlPageBuilder.dll
 c:\code\misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netstandard2.0\HtmlPageBuilder.pdb
+C:\Code\Misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netstandard2.0\HtmlPageBuilder.csproj.AssemblyReference.cache
+C:\Code\Misc\HtmlPageBuilder\HtmlPageBuilder\obj\Debug\netstandard2.0\HtmlPageBuilder.GeneratedMSBuildEditorConfig.editorconfig

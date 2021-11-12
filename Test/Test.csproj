@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>net462;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Watson" Version="4.1.0" />
+    <PackageReference Include="Watson" Version="4.2.2.3" />
   </ItemGroup>
 
   <ItemGroup>

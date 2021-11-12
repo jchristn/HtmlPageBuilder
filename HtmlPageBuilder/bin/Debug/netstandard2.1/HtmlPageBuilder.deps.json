@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "HtmlPageBuilder/1.0.1": {
+      "HtmlPageBuilder/1.0.1.1": {
         "runtime": {
           "HtmlPageBuilder.dll": {}
         }
@@ -15,7 +15,7 @@
     }
   },
   "libraries": {
-    "HtmlPageBuilder/1.0.1": {
+    "HtmlPageBuilder/1.0.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
