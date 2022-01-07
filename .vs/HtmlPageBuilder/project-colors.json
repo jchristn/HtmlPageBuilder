@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fc4db9be-d260-47dd-82a3-ed00d68488f4": {
+      "ProjectGuid": "fc4db9be-d260-47dd-82a3-ed00d68488f4",
+      "DisplayName": "HtmlPageBuilder",
+      "ColorIndex": 0
+    },
+    "29e78eba-0822-41e3-96a6-00b0be72a441": {
+      "ProjectGuid": "29e78eba-0822-41e3-96a6-00b0be72a441",
+      "DisplayName": "Test",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
