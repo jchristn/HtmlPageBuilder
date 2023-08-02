@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1;net462;net48;net6.0;net7.0</TargetFrameworks>
+		<Version>1.0.2</Version>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Authors>Joel Christner</Authors>
+		<Company>Joel Christner</Company>
+		<Description>Simple HTML page builder allowing you to specify head elements and add body elements using simple methods.</Description>
+		<Copyright>(c)2023 Joel Christner</Copyright>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/jchristn/HtmlPageBuilder</PackageProjectUrl>
+		<PackageIcon>icon.png</PackageIcon>
+		<RepositoryUrl>https://github.com/jchristn/HtmlPageBuilder</RepositoryUrl>
+		<RepositoryType>github</RepositoryType>
+		<PackageTags>html page builder head body tag css</PackageTags>
+		<PackageReleaseNotes>.NET 6 support</PackageReleaseNotes>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\..\HtmlPageBuilder.snk</AssemblyOriginatorKeyFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>HtmlPageBuilder.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>HtmlPageBuilder.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="assets\icon.ico">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Include="assets\icon.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Include="LICENSE.md">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="assets\icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="LICENSE.md">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
