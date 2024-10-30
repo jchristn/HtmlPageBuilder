@@ -19,6 +19,11 @@ namespace HtmlPageBuilder
         public string Title { get; set; } = null;
 
         /// <summary>
+        /// Favicon URL.
+        /// </summary>
+        public string FaviconUrl { get; set; } = null;
+
+        /// <summary>
         /// Style.
         /// </summary>
         public string Style { get; set; } = null;
@@ -65,7 +70,10 @@ namespace HtmlPageBuilder
                   "<head>";
 
                 if (!String.IsNullOrEmpty(Title))
-                    ret += "<title>" + Title + "</Title>";
+                    ret += "<title>" + Title + "</title>";
+
+                if (!String.IsNullOrEmpty(FaviconUrl))
+                    ret += "<link rel='icon' type='image/x-icon' href='" + FaviconUrl + "'>";
 
                 if (!String.IsNullOrEmpty(Style))
                     ret += "<style>" + Environment.NewLine + Style + Environment.NewLine + "</style>";

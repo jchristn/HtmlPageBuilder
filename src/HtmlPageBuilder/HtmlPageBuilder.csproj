@@ -1,30 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.1;net462;net48;net6.0;net7.0</TargetFrameworks>
-		<Version>1.0.2</Version>
+		<TargetFrameworks>netstandard2.1;net462;net48;net6.0;net7.0;net8.0</TargetFrameworks>
+		<Version>1.0.4</Version>
+		<Description>Simple HTML page builder allowing you to specify head elements and add body elements using simple methods.</Description>
+		<PackageReleaseNotes>Targeting to include .NET 8</PackageReleaseNotes>
+
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Joel Christner</Authors>
 		<Company>Joel Christner</Company>
-		<Description>Simple HTML page builder allowing you to specify head elements and add body elements using simple methods.</Description>
-		<Copyright>(c)2023 Joel Christner</Copyright>
+		<Copyright>(c)2024 Joel Christner</Copyright>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageProjectUrl>https://github.com/jchristn/HtmlPageBuilder</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryUrl>https://github.com/jchristn/HtmlPageBuilder</RepositoryUrl>
 		<RepositoryType>github</RepositoryType>
 		<PackageTags>html page builder head body tag css</PackageTags>
-		<PackageReleaseNotes>.NET 6 support</PackageReleaseNotes>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\..\HtmlPageBuilder.snk</AssemblyOriginatorKeyFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<DocumentationFile>HtmlPageBuilder.xml</DocumentationFile>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<DocumentationFile>HtmlPageBuilder.xml</DocumentationFile>
 	</PropertyGroup>
 

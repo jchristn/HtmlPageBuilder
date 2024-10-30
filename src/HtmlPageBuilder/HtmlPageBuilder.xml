@@ -161,6 +161,11 @@
             Title.
             </summary>
         </member>
+        <member name="P:HtmlPageBuilder.HtmlHead.FaviconUrl">
+            <summary>
+            Favicon URL.
+            </summary>
+        </member>
         <member name="P:HtmlPageBuilder.HtmlHead.Style">
             <summary>
             Style.
