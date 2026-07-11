@@ -4,152 +4,720 @@
         <name>HtmlPageBuilder</name>
     </assembly>
     <members>
+        <member name="T:HtmlPageBuilder.Html">
+            <summary>
+            Instance-based factory and context for creating pages, bodies, attributes, and fragments.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.Html.#ctor">
+            <summary>
+            Instantiate with default options.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.Html.#ctor(HtmlPageBuilder.HtmlOptions)">
+            <summary>
+            Instantiate with options.
+            </summary>
+            <param name="options">Options. If null, default options are used.</param>
+        </member>
+        <member name="P:HtmlPageBuilder.Html.Options">
+            <summary>
+            Options used by this factory instance.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.Html.CreatedUtc">
+            <summary>
+            Time this factory instance was created.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.Html.IsDisposed">
+            <summary>
+            True after this factory instance has been disposed.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.Html.PagesCreated">
+            <summary>
+            Number of pages created by this factory instance.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.Html.HeadsCreated">
+            <summary>
+            Number of heads created by this factory instance.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.Html.BodiesCreated">
+            <summary>
+            Number of bodies created by this factory instance.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.Html.AttributeCollectionsCreated">
+            <summary>
+            Number of attribute collections created by this factory instance.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.Html.FragmentsCreated">
+            <summary>
+            Number of fragments created by this factory instance.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.Html.Page">
+            <summary>
+            Create an HTML page.
+            </summary>
+            <returns>HTML page.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.Html.Head">
+            <summary>
+            Create an HTML head.
+            </summary>
+            <returns>HTML head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.Html.Body">
+            <summary>
+            Create an HTML body.
+            </summary>
+            <returns>HTML body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.Html.Attributes">
+            <summary>
+            Create an attribute collection.
+            </summary>
+            <returns>HTML attributes.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.Html.Text(System.String)">
+            <summary>
+            Create an encoded text fragment.
+            </summary>
+            <param name="text">Plain text.</param>
+            <returns>HTML fragment.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.Html.Raw(System.String)">
+            <summary>
+            Create a raw HTML fragment.
+            </summary>
+            <param name="html">Raw HTML.</param>
+            <returns>HTML fragment.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.Html.Dispose">
+            <summary>
+            Dispose this factory instance.
+            </summary>
+        </member>
+        <member name="T:HtmlPageBuilder.HtmlAttributes">
+            <summary>
+            HTML attribute collection with validated names and encoded values.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlAttributes.Count">
+            <summary>
+            Number of attributes in the collection.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.Set(System.String,System.String)">
+            <summary>
+            Set or replace an attribute. A null value removes the attribute.
+            </summary>
+            <param name="name">Attribute name.</param>
+            <param name="value">Attribute value.</param>
+            <returns>This attribute collection.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.Id(System.String)">
+            <summary>
+            Set the id attribute.
+            </summary>
+            <param name="value">ID value.</param>
+            <returns>This attribute collection.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.Class(System.String)">
+            <summary>
+            Set the class attribute.
+            </summary>
+            <param name="value">Class value.</param>
+            <returns>This attribute collection.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.AddClass(System.String)">
+            <summary>
+            Add one or more CSS classes.
+            </summary>
+            <param name="classNames">Class name string.</param>
+            <returns>This attribute collection.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.AddClassIf(System.Boolean,System.String)">
+            <summary>
+            Add one or more CSS classes when a condition is true.
+            </summary>
+            <param name="condition">Condition.</param>
+            <param name="classNames">Class name string.</param>
+            <returns>This attribute collection.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.Style(System.String)">
+            <summary>
+            Set the style attribute.
+            </summary>
+            <param name="value">Style value.</param>
+            <returns>This attribute collection.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.AddStyle(System.String,System.String)">
+            <summary>
+            Add a CSS declaration to the style attribute.
+            </summary>
+            <param name="name">CSS property name.</param>
+            <param name="value">CSS property value.</param>
+            <returns>This attribute collection.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.AddStyleIf(System.Boolean,System.String,System.String)">
+            <summary>
+            Add a CSS declaration to the style attribute when a condition is true.
+            </summary>
+            <param name="condition">Condition.</param>
+            <param name="name">CSS property name.</param>
+            <param name="value">CSS property value.</param>
+            <returns>This attribute collection.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.Data(System.String,System.String)">
+            <summary>
+            Set a data-* attribute.
+            </summary>
+            <param name="name">Data attribute suffix.</param>
+            <param name="value">Attribute value.</param>
+            <returns>This attribute collection.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlAttributes.Aria(System.String,System.String)">
+            <summary>
+            Set an aria-* attribute.
+            </summary>
+            <param name="name">ARIA attribute suffix.</param>
+            <param name="value">Attribute value.</param>
+            <returns>This attribute collection.</returns>
+        </member>
         <member name="T:HtmlPageBuilder.HtmlBody">
             <summary>
             HTML page body.
             </summary>
         </member>
+        <member name="P:HtmlPageBuilder.HtmlBody.Id">
+            <summary>
+            Body id attribute.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlBody.Class">
+            <summary>
+            Body class attribute.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlBody.Style">
+            <summary>
+            Body style attribute.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlBody.Attributes">
+            <summary>
+            Additional body attributes.
+            </summary>
+        </member>
         <member name="P:HtmlPageBuilder.HtmlBody.Content">
             <summary>
-            HTML body.
+            HTML body inner content. Setting this property replaces current body content.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.WithAttributes(System.String,System.String,System.String)">
+            <summary>
+            Set body attributes.
+            </summary>
+            <param name="id">ID.</param>
+            <param name="classId">Class ID.</param>
+            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddRaw(System.String)">
+            <summary>
+            Append raw HTML to the body. The value is not encoded.
+            </summary>
+            <param name="html">Raw HTML.</param>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.Add(HtmlPageBuilder.HtmlFragment)">
+            <summary>
+            Append an HTML fragment to the body.
+            </summary>
+            <param name="fragment">HTML fragment.</param>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddText(System.String)">
+            <summary>
+            Append encoded text to the body.
+            </summary>
+            <param name="text">Text.</param>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.Clear">
+            <summary>
+            Clear body content.
+            </summary>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddH1Text(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an H1 element containing encoded text.
+            </summary>
+            <param name="text">Text.</param>
+            <param name="id">ID.</param>
+            <param name="classId">Class ID.</param>
+            <param name="style">Style tag contents.</param>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddParagraphText(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a paragraph containing encoded text.
+            </summary>
+            <param name="text">Text.</param>
+            <param name="id">ID.</param>
+            <param name="classId">Class ID.</param>
+            <param name="style">Style tag contents.</param>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddParagraphHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a paragraph containing raw HTML.
+            </summary>
+            <param name="html">Raw HTML.</param>
+            <param name="id">ID.</param>
+            <param name="classId">Class ID.</param>
+            <param name="style">Style tag contents.</param>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddLineBreak">
+            <summary>
+            Append a line break.
+            </summary>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddHorizontalRule">
+            <summary>
+            Append a horizontal rule.
+            </summary>
+            <returns>This body.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddH1Html(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an H1 element containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddH2Text(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an H2 element containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddH2Html(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an H2 element containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddH3Text(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an H3 element containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddH3Html(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an H3 element containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddH4Text(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an H4 element containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddH5Text(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an H5 element containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddH6Text(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an H6 element containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddPreformatted(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append preformatted encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddDivText(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a div containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddDivHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a div containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddSpanText(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a span containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddSpanHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a span containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddSectionHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a section containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddArticleHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an article containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddMainHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a main element containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddHeaderHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a header containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddFooterHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a footer containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddNavHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a nav containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddLinkText(System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Append a link containing encoded display text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddLinkHtml(System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Append a link containing raw HTML display content.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddImage(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an image.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddOrderedList(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an ordered list containing encoded item text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddUnorderedList(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Append an unordered list containing encoded item text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddTable(System.Data.DataTable,System.String,System.String,System.String)">
+            <summary>
+            Append a table from a DataTable.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddTable(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.String}},System.String,System.String,System.String)">
+            <summary>
+            Append a table from headers and rows.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddTableFromObjects``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.String)">
+            <summary>
+            Append a table from object properties.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddButtonText(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a button containing encoded display text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.AddButtonHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Append a button containing raw HTML display content.
             </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.H1Text(System.String,System.String,System.String,System.String)">
             <summary>
-            H1 text.
+            H1 text. Text is HTML encoded.
             </summary>
-            <param name="text">Text.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.H1Html(System.String,System.String,System.String,System.String)">
+            <summary>
+            H1 HTML. Content is added without encoding.
+            </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.H2Text(System.String,System.String,System.String,System.String)">
             <summary>
-            H2 text.
+            H2 text. Text is HTML encoded.
             </summary>
-            <param name="text">Text.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.H2Html(System.String,System.String,System.String,System.String)">
+            <summary>
+            H2 HTML. Content is added without encoding.
+            </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.H3Text(System.String,System.String,System.String,System.String)">
             <summary>
-            H3 text.
+            H3 text. Text is HTML encoded.
             </summary>
-            <param name="text">Text.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.H3Html(System.String,System.String,System.String,System.String)">
+            <summary>
+            H3 HTML. Content is added without encoding.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.H4Text(System.String,System.String,System.String,System.String)">
+            <summary>
+            H4 text. Text is HTML encoded.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.H5Text(System.String,System.String,System.String,System.String)">
+            <summary>
+            H5 text. Text is HTML encoded.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.H6Text(System.String,System.String,System.String,System.String)">
+            <summary>
+            H6 text. Text is HTML encoded.
+            </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.Preformatted(System.String,System.String,System.String,System.String)">
             <summary>
-            Paragraph.
+            Preformatted text. Text is HTML encoded.
             </summary>
-            <param name="text">Text.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.Paragraph(System.String,System.String,System.String,System.String)">
             <summary>
-            Paragraph.
+            Paragraph containing raw HTML. Prefer ParagraphText for plain text.
             </summary>
-            <param name="text">Text.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.ParagraphText(System.String,System.String,System.String,System.String)">
+            <summary>
+            Paragraph containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.ParagraphHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Paragraph containing raw HTML.
+            </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.Div(System.String,System.String,System.String,System.String)">
             <summary>
-            Div.  
-            Do not use within an encapsulating Paragraph.
+            Div containing raw HTML. Prefer DivText for plain text.
             </summary>
-            <param name="text">Text.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.DivText(System.String,System.String,System.String,System.String)">
+            <summary>
+            Div containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.DivHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Div containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.SpanText(System.String,System.String,System.String,System.String)">
+            <summary>
+            Span containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.SpanHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Span containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.SectionHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Section containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.ArticleHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Article containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.MainHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Main element containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.HeaderHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Header element containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.FooterHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Footer element containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.NavHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Nav element containing raw HTML.
+            </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.Link(System.String,System.String,System.Boolean,System.String,System.String,System.String)">
             <summary>
-            Link.
+            Link with encoded display text.
             </summary>
-            <param name="textToDisplay">Text to display.</param>
-            <param name="url">URL.</param>
-            <param name="newWindow">Flag to indicate if the link should be opened in a new window.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.LinkText(System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Link with encoded display text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.LinkHtml(System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Link with raw HTML display content.
+            </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.Image(System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Image.
             </summary>
-            <param name="text">Text to display.</param>
-            <param name="url">URL.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
         </member>
-        <member name="M:HtmlPageBuilder.HtmlBody.OrderedList(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:HtmlPageBuilder.HtmlBody.OrderedList(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            Ordered list.
+            Ordered list containing encoded item text.
             </summary>
-            <param name="items">Items.</param>
-            <param name="listType">HTML list type, i.e. 1, A, a, I, or i.</param>
-            <param name="emptyVal">Value to display if the list itself is empty.  If null, no list items will be added.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
         </member>
-        <member name="M:HtmlPageBuilder.HtmlBody.UnorderedList(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:HtmlPageBuilder.HtmlBody.OrderedListHtml(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            Unordered list.
+            Ordered list containing raw HTML list item content.
             </summary>
-            <param name="items">Items.</param>
-            <param name="listType">HTML list type, i.e. disc, circle, square, or none.</param>
-            <param name="emptyVal">Value to display if the list itself is empty.  If null, no list items will be added.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.UnorderedList(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Unordered list containing encoded item text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.UnorderedListHtml(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Unordered list containing raw HTML list item content.
+            </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.Table(System.Data.DataTable,System.String,System.String,System.String)">
             <summary>
-            Table.
+            Table. Column names and values are HTML encoded.
             </summary>
-            <param name="table">Data table.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.Table(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.String}},System.String,System.String,System.String)">
+            <summary>
+            Table from headers and rows. Header and cell values are HTML encoded.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.TableFromDictionaries(System.Collections.Generic.IEnumerable{System.Collections.Generic.IDictionary{System.String,System.Object}},System.String,System.String,System.String)">
+            <summary>
+            Table from dictionary rows. Keys become headers in first-seen order.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.TableFromObjects``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.String)">
+            <summary>
+            Table from public instance properties on objects.
+            </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.Button(System.String,System.String,System.String,System.String)">
             <summary>
-            Button.
+            Button with encoded display text.
             </summary>
-            <param name="textToDisplay">Text to display.</param>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.ButtonText(System.String,System.String,System.String,System.String)">
+            <summary>
+            Button with encoded display text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.ButtonHtml(System.String,System.String,System.String,System.String)">
+            <summary>
+            Button with raw HTML display content.
+            </summary>
         </member>
         <member name="M:HtmlPageBuilder.HtmlBody.HorizontalRule(System.String,System.String,System.String)">
             <summary>
             Horizontal rule.
             </summary>
-            <param name="id">ID.</param>
-            <param name="classId">Class ID.</param>
-            <param name="style">Style tag contents, i.e. background-color:powderblue;</param>
-            <returns>String.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.LineBreak(System.String,System.String,System.String)">
+            <summary>
+            Line break.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.ElementText(System.String,System.String,System.String,System.String,System.String,HtmlPageBuilder.HtmlAttributes)">
+            <summary>
+            Create an element containing encoded text.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.ElementHtml(System.String,System.String,System.String,System.String,System.String,HtmlPageBuilder.HtmlAttributes)">
+            <summary>
+            Create an element containing raw HTML.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlBody.ToString">
+            <summary>
+            Create HTML from the body, including the body wrapper.
+            </summary>
+            <returns>HTML string.</returns>
+        </member>
+        <member name="T:HtmlPageBuilder.HtmlFragment">
+            <summary>
+            Represents HTML that is ready to append to a document or another fragment.
+            </summary>
+        </member>
+        <member name="F:HtmlPageBuilder.HtmlFragment.Empty">
+            <summary>
+            Empty HTML fragment.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlFragment.#ctor(System.String)">
+            <summary>
+            Instantiate from raw HTML.
+            </summary>
+            <param name="html">Raw HTML.</param>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlFragment.Content">
+            <summary>
+            Fragment content.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlFragment.FromText(System.String)">
+            <summary>
+            Create a fragment from encoded text.
+            </summary>
+            <param name="text">Plain text.</param>
+            <returns>HTML fragment containing encoded text.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlFragment.FromHtml(System.String)">
+            <summary>
+            Create a fragment from raw HTML.
+            </summary>
+            <param name="html">Raw HTML.</param>
+            <returns>HTML fragment containing raw HTML.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlFragment.op_Addition(HtmlPageBuilder.HtmlFragment,HtmlPageBuilder.HtmlFragment)">
+            <summary>
+            Combine two fragments.
+            </summary>
+            <param name="left">Left fragment.</param>
+            <param name="right">Right fragment.</param>
+            <returns>Combined fragment.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlFragment.op_Implicit(HtmlPageBuilder.HtmlFragment)~System.String">
+            <summary>
+            Convert a fragment to its HTML string.
+            </summary>
+            <param name="fragment">Fragment.</param>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlFragment.ToString">
+            <summary>
+            Return fragment HTML.
+            </summary>
+            <returns>HTML.</returns>
         </member>
         <member name="T:HtmlPageBuilder.HtmlHead">
             <summary>
@@ -181,6 +749,11 @@
             Character set.
             </summary>
         </member>
+        <member name="P:HtmlPageBuilder.HtmlHead.MetaViewport">
+            <summary>
+            Viewport.
+            </summary>
+        </member>
         <member name="P:HtmlPageBuilder.HtmlHead.MetaKeywords">
             <summary>
             Keywords.
@@ -198,8 +771,8 @@
         </member>
         <member name="P:HtmlPageBuilder.HtmlHead.AdditionalElements">
             <summary>
-            Additional elements, which will be added to the HTML exactly as included in the list, in the order in which they appear in the list.
-            Elements added to this list must be HTML formatted.
+            Additional elements, which will be added exactly as included in the list.
+            Elements added to this list must already be valid HTML.
             </summary>
         </member>
         <member name="P:HtmlPageBuilder.HtmlHead.Content">
@@ -212,9 +785,138 @@
             Instantiate the object.
             </summary>
         </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.WithTitle(System.String)">
+            <summary>
+            Set the title.
+            </summary>
+            <param name="title">Title.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.WithFavicon(System.String)">
+            <summary>
+            Set the favicon URL.
+            </summary>
+            <param name="url">Favicon URL.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.WithStyle(System.String)">
+            <summary>
+            Set inline style content.
+            </summary>
+            <param name="style">CSS style content.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.WithBaseUrl(System.String)">
+            <summary>
+            Set the base URL.
+            </summary>
+            <param name="url">Base URL.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.WithMetaDescription(System.String)">
+            <summary>
+            Set the meta description.
+            </summary>
+            <param name="description">Description.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.WithMetaKeywords(System.String)">
+            <summary>
+            Set the meta keywords.
+            </summary>
+            <param name="keywords">Keywords.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.WithMetaAuthor(System.String)">
+            <summary>
+            Set the meta author.
+            </summary>
+            <param name="author">Author.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.AddStylesheet(System.String,System.String)">
+            <summary>
+            Add a stylesheet link.
+            </summary>
+            <param name="href">Stylesheet URL.</param>
+            <param name="media">Optional media attribute.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.AddScriptSource(System.String,System.Boolean)">
+            <summary>
+            Add a script source.
+            </summary>
+            <param name="src">Script URL.</param>
+            <param name="defer">True to include defer.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.AddRawElement(System.String)">
+            <summary>
+            Add a raw head element. The value is not encoded.
+            </summary>
+            <param name="html">Raw HTML element.</param>
+            <returns>This head.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlHead.ToString">
+            <summary>
+            Create an HTML string from the head.
+            </summary>
+            <returns>HTML string.</returns>
+        </member>
+        <member name="T:HtmlPageBuilder.HtmlOptions">
+            <summary>
+            Options used by an Html factory instance when creating pages, heads, and bodies.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlOptions.DefaultLanguage">
+            <summary>
+            Default language applied to pages created by the factory. Null leaves the page default unchanged.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlOptions.DefaultTitle">
+            <summary>
+            Default title applied to pages and heads created by the factory. Null leaves the target default unchanged.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlOptions.DefaultMetaCharset">
+            <summary>
+            Default meta charset applied to heads created by the factory. Null leaves the target default unchanged.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlOptions.DefaultMetaViewport">
+            <summary>
+            Default viewport applied to heads created by the factory. Null leaves the target default unchanged.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlOptions.DefaultBodyId">
+            <summary>
+            Default body id applied to bodies created by the factory. Null leaves the target default unchanged.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlOptions.DefaultBodyClass">
+            <summary>
+            Default body class applied to bodies created by the factory. Null leaves the target default unchanged.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlOptions.DefaultBodyStyle">
+            <summary>
+            Default body style applied to bodies created by the factory. Null leaves the target default unchanged.
+            </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlOptions.Clone">
+            <summary>
+            Create a copy of these options.
+            </summary>
+            <returns>Options copy.</returns>
+        </member>
         <member name="T:HtmlPageBuilder.HtmlPage">
             <summary>
             HTML page.
+            </summary>
+        </member>
+        <member name="P:HtmlPageBuilder.HtmlPage.Language">
+            <summary>
+            HTML language attribute. If null or empty, no lang attribute is emitted.
             </summary>
         </member>
         <member name="P:HtmlPageBuilder.HtmlPage.Head">
@@ -231,6 +933,62 @@
             <summary>
             Instantiate the object.
             </summary>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlPage.WithLanguage(System.String)">
+            <summary>
+            Set the HTML language attribute.
+            </summary>
+            <param name="language">Language value.</param>
+            <returns>This page.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlPage.WithTitle(System.String)">
+            <summary>
+            Set the page title.
+            </summary>
+            <param name="title">Title.</param>
+            <returns>This page.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlPage.WithHead(System.Action{HtmlPageBuilder.HtmlHead})">
+            <summary>
+            Configure the head using a fluent callback.
+            </summary>
+            <param name="configure">Head configuration callback.</param>
+            <returns>This page.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlPage.WithBody(System.Action{HtmlPageBuilder.HtmlBody})">
+            <summary>
+            Configure the body using a fluent callback.
+            </summary>
+            <param name="configure">Body configuration callback.</param>
+            <returns>This page.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlPage.AddH1Text(System.String)">
+            <summary>
+            Append an H1 element containing encoded text.
+            </summary>
+            <param name="text">Text.</param>
+            <returns>This page.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlPage.AddParagraphText(System.String)">
+            <summary>
+            Append a paragraph containing encoded text.
+            </summary>
+            <param name="text">Text.</param>
+            <returns>This page.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlPage.AddRaw(System.String)">
+            <summary>
+            Append raw HTML to the body.
+            </summary>
+            <param name="html">HTML.</param>
+            <returns>This page.</returns>
+        </member>
+        <member name="M:HtmlPageBuilder.HtmlPage.Add(HtmlPageBuilder.HtmlFragment)">
+            <summary>
+            Append an HTML fragment to the body.
+            </summary>
+            <param name="fragment">HTML fragment.</param>
+            <returns>This page.</returns>
         </member>
         <member name="M:HtmlPageBuilder.HtmlPage.ToString">
             <summary>

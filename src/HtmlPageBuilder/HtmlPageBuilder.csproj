@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.1;net462;net48;net6.0;net7.0;net8.0</TargetFrameworks>
-		<Version>1.0.4</Version>
+		<TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+		<Version>1.2.0</Version>
 		<Description>Simple HTML page builder allowing you to specify head elements and add body elements using simple methods.</Description>
-		<PackageReleaseNotes>Targeting to include .NET 8</PackageReleaseNotes>
+		<PackageReleaseNotes>Add instance-based Html context with HtmlOptions and HtmlFragment, broader fluent body append APIs, IEnumerable list support, object/dictionary/header-row table helpers, class/style attribute builders, updated docs, and expanded tests.</PackageReleaseNotes>
 
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Joel Christner</Authors>
@@ -21,6 +21,8 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<DocumentationFile>HtmlPageBuilder.xml</DocumentationFile>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -46,5 +48,9 @@
 			<PackagePath></PackagePath>
 		</None>
 	</ItemGroup>
+
+	<Target Name="CopyXmlDocumentationFileToOutput" AfterTargets="CoreCompile" Condition="Exists('$(DocumentationFile)')">
+		<Copy SourceFiles="$(DocumentationFile)" DestinationFiles="$(TargetDir)$(AssemblyName).xml" SkipUnchangedFiles="true" />
+	</Target>
 
 </Project>
