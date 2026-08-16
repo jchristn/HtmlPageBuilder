@@ -23,6 +23,7 @@ namespace Test.Shared
                     ListAndTableSuite(),
                     AttributeSuite(),
                     DeveloperExperienceSuite(),
+                    EdgeCaseSuite(),
                     CompatibilitySuite(),
                 };
             }
@@ -871,6 +872,114 @@ namespace Test.Shared
                     AssertThrows<ObjectDisposedException>(() => builder.Attributes());
                     AssertThrows<ObjectDisposedException>(() => builder.Text("x"));
                     AssertThrows<ObjectDisposedException>(() => builder.Raw("<br>"));
+                }),
+            });
+        }
+
+        private static TestSuiteDescriptor EdgeCaseSuite()
+        {
+            return Suite("EdgeCases", "Edge cases and boundary coverage", new List<TestCaseDescriptor>
+            {
+                Case("EdgeCases", "PageEmitsDoctypeAndFullDocument", "Page emits the HTML5 doctype and complete default document", () =>
+                {
+                    string html = new HtmlPage().ToString();
+
+                    AssertTrue(html.StartsWith("<!DOCTYPE html>"));
+                    AssertEqual(
+                        "<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head><body></body></html>",
+                        html);
+                }),
+
+                Case("EdgeCases", "PageDoctypePrecedesLanguageAttribute", "Doctype precedes the html element even when a language is set", () =>
+                {
+                    string html = new HtmlPage().WithLanguage("en").ToString();
+                    AssertTrue(html.StartsWith("<!DOCTYPE html><html lang=\"en\">"));
+                }),
+
+                Case("EdgeCases", "AddStyleDoesNotDuplicateTrailingSemicolons", "AddStyle keeps a single separator when values already end with a semicolon", () =>
+                {
+                    Html builder = new Html();
+                    HtmlAttributes attributes = builder.Attributes()
+                        .AddStyle("color", "red;")
+                        .AddStyle("margin", "0;");
+
+                    string html = builder.Body().ElementText("span", "x", attributes: attributes);
+                    AssertEqual("<span style=\"color:red;margin:0;\">x</span>", html);
+                    AssertNotContains(html, ";;");
+                }),
+
+                Case("EdgeCases", "AddStyleTrimsWhitespaceAroundDeclarations", "AddStyle trims whitespace around property names and values", () =>
+                {
+                    HtmlAttributes attributes = new HtmlAttributes().AddStyle("  padding  ", "  4px  ");
+                    string html = new HtmlBody().ElementText("div", "x", attributes: attributes);
+                    AssertEqual("<div style=\"padding:4px;\">x</div>", html);
+                }),
+
+                Case("EdgeCases", "FragmentFromNullTextEncodesToEmpty", "HtmlFragment.FromText(null) encodes to an empty fragment", () =>
+                {
+                    AssertEqual("", HtmlFragment.FromText(null).ToString());
+                    AssertEqual("", HtmlFragment.FromText(null).Content);
+                }),
+
+                Case("EdgeCases", "HeaderRowTableHandlesNullRow", "Header/row table renders a null row as an empty table row", () =>
+                {
+                    IEnumerable<string>[] rows = new IEnumerable<string>[] { new[] { "1" }, null };
+                    string html = new HtmlBody().Table(new[] { "A" }, rows);
+                    AssertEqual("<table><tr><th>A</th></tr><tr><td>1</td></tr><tr></tr></table>", html);
+                }),
+
+                Case("EdgeCases", "HeaderRowTableHandlesNullHeadersAndRows", "Header/row table renders an empty header row when headers and rows are null", () =>
+                {
+                    string html = new HtmlBody().Table((IEnumerable<string>)null, (IEnumerable<IEnumerable<string>>)null);
+                    AssertEqual("<table><tr></tr></table>", html);
+                }),
+
+                Case("EdgeCases", "ObjectTableHandlesNullItem", "Object table renders empty cells for a null item", () =>
+                {
+                    BuildRow[] rows = new BuildRow[] { new BuildRow { Name = "A", Status = "Ready" }, null };
+                    string html = new HtmlBody().TableFromObjects(rows);
+                    AssertEqual("<table><tr><th>Name</th><th>Status</th></tr><tr><td>A</td><td>Ready</td></tr><tr><td></td><td></td></tr></table>", html);
+                }),
+
+                Case("EdgeCases", "DictionaryTableHandlesNullRow", "Dictionary table renders empty cells for a null row", () =>
+                {
+                    List<IDictionary<string, object>> rows = new List<IDictionary<string, object>>
+                    {
+                        new Dictionary<string, object> { { "Name", "A" } },
+                        null,
+                    };
+
+                    string html = new HtmlBody().TableFromDictionaries(rows);
+                    AssertEqual("<table><tr><th>Name</th></tr><tr><td>A</td></tr><tr><td></td></tr></table>", html);
+                }),
+
+                Case("EdgeCases", "ElementHtmlRejectsInvalidTagName", "ElementHtml rejects invalid tag names", () =>
+                {
+                    AssertThrows<ArgumentException>(() => new HtmlBody().ElementHtml("bad tag", "<x>"));
+                    AssertThrows<ArgumentException>(() => new HtmlBody().ElementHtml(null, "x"));
+                }),
+
+                Case("EdgeCases", "DataAndAriaNullNamesThrow", "Data and aria helpers reject null names", () =>
+                {
+                    AssertThrows<ArgumentException>(() => new HtmlAttributes().Data(null, "x"));
+                    AssertThrows<ArgumentException>(() => new HtmlAttributes().Aria(null, "x"));
+                }),
+
+                Case("EdgeCases", "HeadStyleIsWrappedInStyleElement", "Head inline style is wrapped in a style element with its raw CSS", () =>
+                {
+                    string html = new HtmlHead().WithStyle("a{color:red}").ToString();
+                    AssertContains(html, "<style>");
+                    AssertContains(html, "a{color:red}");
+                    AssertContains(html, "</style>");
+                }),
+
+                Case("EdgeCases", "OptionsCloneIsIndependentOfSource", "Html options are cloned so later source mutations do not leak", () =>
+                {
+                    HtmlOptions options = new HtmlOptions { DefaultTitle = "Original" };
+                    Html builder = new Html(options);
+                    options.DefaultTitle = "Changed";
+
+                    AssertContains(builder.Head().ToString(), "<title>Original</title>");
                 }),
             });
         }
