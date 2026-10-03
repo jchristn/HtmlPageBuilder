@@ -300,7 +300,7 @@ The test suite uses Touchstone as the shared source of truth:
 - `Test.Shared` defines the reusable test descriptors.
 - `Test.Automated` runs the descriptors through the Touchstone CLI runner.
 - `Test.Xunit` adapts the same descriptors to xUnit.
-- `Test.Nunit` adapts the same descriptors to NUnit.
+- `Test.Nunit` adapts the same descriptors to NUnit (NUnit 5).
 
 The shared suite exercises document rendering, fluent construction, encoded text paths, raw HTML paths, fragments, context helpers, custom attributes, invalid input, null/empty behavior, lists, tables, legacy compatibility helpers, and target-framework coverage for both `net8.0` and `net10.0`.
 

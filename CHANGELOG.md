@@ -1,5 +1,19 @@
 # Change Log
 
+## Unreleased - Test Infrastructure Maintenance
+
+No changes to the `HtmlPageBuilder` library or its public API; the library has no external package dependencies, so the published package remains at v1.2.0.
+
+### Test Dependency Updates
+
+- `Touchstone.Core`, `Touchstone.Cli`, `Touchstone.XunitAdapter`, `Touchstone.NunitAdapter` 0.1.12 -> 0.2.0
+- `NUnit` 4.6.1 -> 5.0.0
+- `NUnit.Analyzers` 4.14.0 -> 4.15.0
+- `NUnit3TestAdapter` 6.2.0 -> 6.3.0
+- `Microsoft.NET.Test.Sdk` 18.9.0 -> 18.10.1
+- `coverlet.collector` 10.0.1 -> 10.1.0
+- Validated the full shared suite through Touchstone CLI, xUnit, and NUnit on both `net8.0` and `net10.0`.
+
 ## v1.2.0 - Current
 
 This release focuses on developer experience: fewer awkward `AddRaw(body.Helper(...))` call sites, better data-shape support, clearer fragment handling, and more ergonomic attributes.
