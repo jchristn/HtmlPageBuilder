@@ -16,8 +16,6 @@
 		<RepositoryUrl>https://github.com/jchristn/HtmlPageBuilder</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>html page builder head body tag css</PackageTags>
-		<SignAssembly>True</SignAssembly>
-		<AssemblyOriginatorKeyFile>..\..\HtmlPageBuilder.snk</AssemblyOriginatorKeyFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<DocumentationFile>HtmlPageBuilder.xml</DocumentationFile>
